@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, ScrollView, Text, ImageBackground } from 'react-native'
-import FlatBanner from '../../flatBanner/FlatBanner'
+import UpperLetterBanner from '../../banners/upperLetterBanner/UpperLetterBanner'
 import styles from './styles'
 
 const BigSubMenuContainer = props => {
@@ -17,7 +17,7 @@ const BigSubMenuContainer = props => {
       <View style={styles.body}>
         <ScrollView>
           {props.items.map((item, index) => (
-            <FlatBanner
+            <UpperLetterBanner
               navigation={props.navigation}
               key={index}
               title={item.name}

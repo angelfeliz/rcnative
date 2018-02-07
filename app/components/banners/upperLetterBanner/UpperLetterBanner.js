@@ -11,7 +11,7 @@ const capSplitFirstLetter = title => {
   return title
 }
 
-const FlatBanner = props => {
+const UpperLetterBanner = props => {
   return (
     <TouchableWithoutFeedback
       onPress={() => props.navigation.navigate(props.detailScreen)}
@@ -30,4 +30,4 @@ const FlatBanner = props => {
   )
 }
 
-export default FlatBanner
+export default UpperLetterBanner
