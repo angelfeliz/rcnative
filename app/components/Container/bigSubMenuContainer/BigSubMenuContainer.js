@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, ScrollView, Text, ImageBackground } from 'react-native'
-import UpperLetterBanner from '../../banners/upperLetterBanner/UpperLetterBanner'
+import UpperLetterBanner from '../../cards/upperLetterBanner/UpperLetterBanner'
 import styles from './styles'
 
 const BigSubMenuContainer = props => {
