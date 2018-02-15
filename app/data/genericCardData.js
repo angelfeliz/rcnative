@@ -16,8 +16,8 @@ export default [
     title: 'Letterhead',
     description:
       'Franciscan University approved letterhead and letter writing guidelines.',
-    link: '/letterhead',
-    hoverable: true
+    hoverable: true,
+    link: 'LetterHead'
   },
   {
     title: 'Suggest a Story',

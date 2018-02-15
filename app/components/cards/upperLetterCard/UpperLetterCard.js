@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { View, Text, TouchableWithoutFeedback } from 'react-native'
 import styles from './styles'
 
@@ -11,11 +12,9 @@ const capSplitFirstLetter = title => {
   return title
 }
 
-const UpperLetterBanner = props => {
+const UpperLetterCard = props => {
   return (
-    <TouchableWithoutFeedback
-      onPress={() => props.navigation.navigate(props.detailScreen)}
-    >
+    <TouchableWithoutFeedback onPress={() => props.funcCallBack()}>
       <View style={styles.containerInner}>
         <View style={styles.capLetter}>
           <Text style={styles.capFont}>{capSplitFirstLetter(props.title)}</Text>
@@ -30,4 +29,8 @@ const UpperLetterBanner = props => {
   )
 }
 
-export default UpperLetterBanner
+UpperLetterCard.propTypes = {
+  title: PropTypes.string.isRequired
+}
+
+export default UpperLetterCard

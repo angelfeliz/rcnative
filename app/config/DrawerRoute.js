@@ -8,6 +8,7 @@ import About from '../screens/About'
 import DrawerContainer from '../components/Container/DrawerContainer'
 import EStyleSheet from 'react-native-extended-stylesheet'
 import AboutDetail from '../screens/AboutDetail'
+import LetterHead from '../screens/LetterHead'
 
 const styles = EStyleSheet.create({
   header: {
@@ -40,7 +41,8 @@ const DrawerNav = DrawerNavigator(
 const DrawerRoute = StackNavigator(
   {
     NextNavigation: { screen: DrawerNav },
-    AboutDetail: { screen: AboutDetail }
+    AboutDetail: { screen: AboutDetail },
+    LetterHead: { screen: LetterHead }
   },
   {
     headerMode: 'float',
