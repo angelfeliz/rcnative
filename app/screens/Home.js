@@ -12,7 +12,6 @@ export default class Home extends Component {
   onClickGenericCard () {}
 
   onClickToNavigate (link, navigate, props) {
-    console.log(props)
     navigate(link, props)
   }
 

@@ -3,7 +3,7 @@ import EStyleSheet from 'react-native-extended-stylesheet'
 const styles = EStyleSheet.create({
   containerInner: {
     flexDirection: 'row',
-    flex: 2,
+    flex: 1,
     backgroundColor: 'white',
     paddingTop: 0,
     paddingRight: 0,

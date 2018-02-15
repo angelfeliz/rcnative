@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, ScrollView } from 'react-native'
 import { Icon } from 'native-base'
 import UpperLetterCard from '../components/cards/upperLetterCard/UpperLetterCard'
 import EStyleSheet from 'react-native-extended-stylesheet'
@@ -8,23 +8,38 @@ const TYPE_LETTER = [
   'Sample Letterhead',
   'Letter Writing Guide',
   'Page One Template',
-  'Page One Template'
+  'Page Two Template'
 ]
 const styles = EStyleSheet.create({
   paragraph: {
-    flex: 1
+    flex: 1,
+    paddingLeft: 1,
+    paddingRight: 1
   },
   title: {
-    fontSize: 18
+    fontSize: 18,
+    marginTop: 5,
+    marginBottom: 10,
+    textAlign: 'center'
   },
   description: {
-    marginTop: 20,
-    marginBottom: 20,
+    marginBottom: 12,
     lineHeight: 23
   },
   letter: {
     flex: 1,
     flexDirection: 'column'
+  },
+  arrowStyle: {
+    paddingLeft: 6,
+    paddingBottom: 3,
+    color: 'white'
+  },
+  container: {
+    flex: 1,
+    flexDirection: 'column',
+    paddingLeft: 3,
+    paddingRight: 3
   }
 })
 
@@ -48,9 +63,11 @@ class LetterHead extends Component {
     const { params } = this.props.navigation.state
     console.log(params ? params.title : 'no money')
     return (
-      <View style={{ flex: 1, flexDirection: 'column' }}>
+      <ScrollView style={styles.container}>
         <View style={styles.paragraph}>
-          <Text style={styles.title}>{params.title}</Text>
+          <View>
+            <Text style={styles.title}>{params.title}</Text>
+          </View>
           <Text style={styles.description}>{description}</Text>
         </View>
         <View style={styles.letter}>
@@ -58,7 +75,7 @@ class LetterHead extends Component {
             return <UpperLetterCard key={index} title={item} />
           })}
         </View>
-      </View>
+      </ScrollView>
     )
   }
 }

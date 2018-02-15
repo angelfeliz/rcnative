@@ -4,10 +4,8 @@ import { Constants } from 'expo'
 import { StackNavigator, DrawerNavigator } from 'react-navigation'
 import { Icon } from 'native-base'
 import HomeScreen from '../screens/Home'
-import About from '../screens/About'
 import DrawerContainer from '../components/Container/DrawerContainer'
 import EStyleSheet from 'react-native-extended-stylesheet'
-import AboutDetail from '../screens/AboutDetail'
 import LetterHead from '../screens/LetterHead'
 
 const styles = EStyleSheet.create({
@@ -26,9 +24,6 @@ const DrawerNav = DrawerNavigator(
   {
     Home: {
       screen: HomeScreen
-    },
-    About: {
-      screen: About
     }
   },
   {
@@ -38,10 +33,10 @@ const DrawerNav = DrawerNavigator(
 )
 
 // I use this to define the global header of all screen how use DrawerNavigator that is above
+// Any screen that you want to navigate with out the drawer menu, has to be set here
 const DrawerRoute = StackNavigator(
   {
-    NextNavigation: { screen: DrawerNav },
-    AboutDetail: { screen: AboutDetail },
+    DrawerNav: { screen: DrawerNav },
     LetterHead: { screen: LetterHead }
   },
   {
